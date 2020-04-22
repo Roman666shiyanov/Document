@@ -221,9 +221,9 @@ namespace WindowsFormsApp7
         private void button19_Click(object sender, EventArgs e)
         {
 
-            double i = int.Parse(Text_Box7.Text);
+            double i = int.Parse(Text_Box7.Text);//вводная строка
 
-            // перевод из сантиметра 
+                // перевод из сантиметра 
 
             if (Combo_Box1.SelectedItem == "Сантиметр" && Combo_Box2.SelectedItem == "Дюйм")// Сантиметр - Дюйм
             {
