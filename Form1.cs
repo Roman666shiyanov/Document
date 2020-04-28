@@ -364,6 +364,7 @@ namespace WindowsFormsApp7
 
             }
         }
+       
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -374,7 +375,25 @@ namespace WindowsFormsApp7
         {
 
         }
+private void button19_Click_1(object sender, EventArgs e)// запись в файл
+        {
+            FileStream file = new FileStream("C:\\Konvertirovannoe.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(file);
+            writer.Write(" " + Label10.Text);
+            writer.Close();
+        }
 
+        private void button20_Click(object sender, EventArgs e)// импорт из файла
+        {         
+            FileStream file = new FileStream("C:\\znachenie.txt", FileMode.OpenOrCreate, FileAccess.Read);
+          
+            StreamReader reader = new StreamReader(file);
+            Text_Box7.Text = reader.ReadToEnd();
+            Combo_Box1.Text = reader.ReadToEnd();
+            Combo_Box2.Text = reader.ReadToEnd();
+            
+            reader.Close();
+        }
         private void button17_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + ",";
